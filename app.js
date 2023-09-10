@@ -6,7 +6,12 @@ const port = 3000
 const days = ["Sunday", "Monday", "Tuesday","Wednesday", "Thursday", "Friday","Saturday"]
 
 
-app.get('/', (req, res) => {
+app.get("/", (req,res) => {
+
+    res.send({HNGX: "Welcome to stage one api endpoint"})
+})
+
+app.get('/api', (req, res) => {
     const slack_name = req.query['slack_name']
     const track = req.query['track']
 
