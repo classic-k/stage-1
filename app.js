@@ -19,13 +19,14 @@ app.get('/api', (req, res) => {
 const day = days[dt.getDay()]
 
 const year = dt.getUTCFullYear()
-const mn = dt.getUTCMonth()
-const date = dt.getUTCDate()
-const hr = dt.getUTCHours()
-const min = dt.getUTCMinutes()
-const sec = dt.getUTCSeconds()
+const mn = dt.getUTCMonth() < 10 ? "0" + dt.getUTCMonth() :  dt.getUTCMonth()
+const date = dt.getUTCDate()  < 10 ? "0" + dt.getUTCDate() :  dt.getUTCDate()
+const hr = dt.getUTCHours() < 10 ? "0" + dt.getUTCHours() :  dt.getUTCHours()
+const min = dt.getUTCMinutes() < 10 ? "0" + dt.getUTCMinutes() :  dt.getUTCMinutes()
+const sec = dt.getUTCSeconds() < 10 ? "0" + dt.getUTCSeconds() :  dt.getUTCSeconds()
 
 const utc_time = `${year}-${mn}-${date}T${hr}:${min}:${sec}Z`
+console.log(utc_time)
     const response = {
         slack_name: slack_name,
         current_day: day,
