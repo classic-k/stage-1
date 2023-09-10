@@ -26,11 +26,11 @@ const utc_time = `${year}-${mn}-${date}T${hr}:${min}:${sec}Z`
         current_day: day,
         utc_time,
         track,
-        github_file: "",
-        github_repo: "",
+        github_file_url: "https://github.com/classic-k/stage-1/blob/main/app.js",
+        github_repo_url: "https://github.com/classic-k/stage-1",
         status: 200
     }
-  //  console.log(response)
+  //  console.log(response) git remote add origin https://github.com/classic-k/stage-1.git
   res.send(response)
 })
 
