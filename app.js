@@ -19,7 +19,7 @@ app.get('/api', (req, res) => {
 const day = days[dt.getDay()]
 
 const year = dt.getUTCFullYear()
-const mn = dt.getUTCMonth() < 10 ? "0" + dt.getUTCMonth() :  dt.getUTCMonth()
+const mn = (dt.getUTCMonth() + 1) < 10 ? "0" + (dt.getUTCMonth() + 1) :  dt.getUTCMonth() + 1
 const date = dt.getUTCDate()  < 10 ? "0" + dt.getUTCDate() :  dt.getUTCDate()
 const hr = dt.getUTCHours() < 10 ? "0" + dt.getUTCHours() :  dt.getUTCHours()
 const min = dt.getUTCMinutes() < 10 ? "0" + dt.getUTCMinutes() :  dt.getUTCMinutes()
